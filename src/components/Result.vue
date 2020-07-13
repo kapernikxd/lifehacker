@@ -1,5 +1,5 @@
 <template>
-    <section class="result">
+    <section class="result" id="result">
         <div class="container">
             <div class="result__inner inner">
                 <h2 class="result__inner-title subtitle">Где узнать результаты</h2>
@@ -13,9 +13,14 @@
 
                     <div class="info_box__items">
 
+
                         <div class="info_box__item">
                             <div class="info_box__item-left">
-                                <img class="info_box__item-img" src="../assets/img/Group1.png">
+                                <div class="info_box__item-img">
+                                    <div class="info_box__item-circle-second">
+                                        <p class="info_box__item-num">1</p>
+                                    </div>
+                                </div>
                             </div>
                             <div class="info_box__item-right">
                                 <p class="info_box__ir-title">Посмотреть трансляцию</p>
@@ -25,7 +30,11 @@
 
                         <div class="info_box__item">
                             <div class="info_box__item-left">
-                                <img class="info_box__item-img" src="../assets/img/Group2.png">
+                                <div class="info_box__item-img">
+                                    <div class="info_box__item-circle-second">
+                                        <p class="info_box__item-num">2</p>
+                                    </div>
+                                </div>
                             </div>
                             <div class="info_box__item-right">
                                 <p class="info_box__ir-title">Проверить числа в архиве тиражей </p>
@@ -35,7 +44,11 @@
 
                         <div class="info_box__item">
                             <div class="info_box__item-left">
-                                <img class="info_box__item-img" src="../assets/img/Group3.png">
+                                <div class="info_box__item-img">
+                                    <div class="info_box__item-circle-second">
+                                        <p class="info_box__item-num">3</p>
+                                    </div>
+                                </div>
                             </div>
                             <div class="info_box__item-right">
                                 <p class="info_box__ir-title">Получить SMS</p>
@@ -45,7 +58,11 @@
 
                         <div class="info_box__item">
                             <div class="info_box__item-left">
-                                <img class="info_box__item-img" src="../assets/img/Group4.png">
+                                <div class="info_box__item-img">
+                                    <div class="info_box__item-circle-second">
+                                        <p class="info_box__item-num">4</p>
+                                    </div>
+                                </div>
                             </div>
                             <div class="info_box__item-right">
                                 <p class="info_box__ir-title">Проверить результаты в мобильном приложении</p>
@@ -55,7 +72,11 @@
 
                         <div class="info_box__item">
                             <div class="info_box__item-left">
-                                <img class="info_box__item-img" src="../assets/img/Group5.png">
+                                <div class="info_box__item-img">
+                                    <div class="info_box__item-circle-second">
+                                        <p class="info_box__item-num">5</p>
+                                    </div>
+                                </div>
                             </div>
                             <div class="info_box__item-right">
                                 <p class="info_box__ir-title">Спросить результаты в точках распространения билетов</p>
@@ -65,7 +86,11 @@
 
                         <div class="info_box__item">
                             <div class="info_box__item-left">
-                                <img class="info_box__item-img" src="../assets/img/Group6.png">
+                                <div class="info_box__item-img">
+                                    <div class="info_box__item-circle-second">
+                                        <p class="info_box__item-num">6</p>
+                                    </div>
+                                </div>
                             </div>
                             <div class="info_box__item-right">
                                 <p class="info_box__ir-title">Узнать в газете</p>
@@ -75,7 +100,11 @@
 
                         <div class="info_box__item">
                             <div class="info_box__item-left">
-                                <img class="info_box__item-img" src="../assets/img/Group7.png">
+                                <div class="info_box__item-img">
+                                    <div class="info_box__item-circle-second">
+                                        <p class="info_box__item-num">7</p>
+                                    </div>
+                                </div>
                             </div>
                             <div class="info_box__item-right">
                                 <p class="info_box__ir-title">Узнать по телефону </p>

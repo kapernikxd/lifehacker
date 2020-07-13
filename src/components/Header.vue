@@ -9,9 +9,9 @@
                 </div>
                 <div class="header__right">
                     <div class="seti-icons">
-                        <a class="seti-icon" href=""><font-awesome-icon class="fa" :icon="{ prefix: 'fab', iconName: 'facebook' }"/></a>
-                        <a class="seti-icon" href=""><font-awesome-icon class="fa" :icon="{ prefix: 'fab', iconName: 'twitter' }"/></a>
-                        <a class="seti-icon" href=""><font-awesome-icon class="fa" :icon="{ prefix: 'fab', iconName: 'vk' }"/></a>
+                        <a class="seti-icon" href="https://www.facebook.com/"><font-awesome-icon class="fa" :icon="{ prefix: 'fab', iconName: 'facebook-f' }"/></a>
+                        <a class="seti-icon" href="https://twitter.com/"><font-awesome-icon class="fa" :icon="{ prefix: 'fab', iconName: 'twitter' }"/></a>
+                        <a class="seti-icon" href="https://vk.com/"><font-awesome-icon class="fa" :icon="{ prefix: 'fab', iconName: 'vk' }"/></a>
 
                     </div>
                 </div>
@@ -27,7 +27,9 @@
         methods: {
             handleScroll () {
                 let main = document.querySelector(".main");
-                let header = main.offsetHeight + main.offsetTop;
+                let headerheight = document.querySelector(".header").offsetHeight;
+                let header = main.offsetHeight + main.offsetTop - headerheight;
+                console.log(header)
 
                 let fa_icons = document.querySelectorAll(".fa")
                 if (window.pageYOffset >= header) {
@@ -54,8 +56,8 @@
     }
 </script>
 
-<style scoped>
-
+<style scoped lang="scss">
+    @import "../assets/css/variables.scss";
     .header {
         position: fixed;
         width: 100%;
@@ -67,7 +69,7 @@
     }
 
     .header-color {
-        background-color: #ED5E42;
+        background-color: $main-bg-color;
         margin-top: 0px;
         transition-duration: .1s;
     }
@@ -89,17 +91,18 @@
         border-radius: 20px;
         display: inline-block;
         text-align: center;
+
+        &:hover .fa{
+            color: #ED5E42 !important;
+        }
+
+        .fa {
+            font-size: 22px !important;
+            margin-top: 9px;
+            color: #FF9E27;
+        }
     }
 
-    .fa {
-        font-size: 22px !important;
-        margin-top: 9px;
-        color: #FF9E27;
-    }
-
-    .seti-icon:hover .fa{
-        color: #ED5E42 !important;
-    }
 
     @media (max-width: 768px) {
 
@@ -115,33 +118,34 @@
             background-color: #ED5E42;
             padding-top: 9px;
             padding-bottom: 7px;
+
+            & .header__inner {
+                align-items: normal;
+
+                & .logo__img {
+                    height: 23px;
+                }
+
+                & .seti-icon {
+                    margin-left: 12px;
+                    width: 25px;
+                    height: 25px;
+                    border-radius: 20px;
+
+                    &:hover .fa {
+                        color: #FF9E27 !important;
+                    }
+
+                    .fa {
+                        margin-top: 0px;
+                        font-size: inherit !important;
+                        color: #ED5E42 !important;
+                    }
+                }
+            }
+
         }
 
-        .header__inner {
-            align-items: normal;
-        }
-
-
-        .seti-icon {
-            margin-left: 12px;
-            width: 25px;
-            height: 25px;
-            border-radius: 20px;
-        }
-
-        .seti-icon:hover .fa {
-            color: #FF9E27 !important;
-        }
-
-        .fa {
-            margin-top: 0px;
-            font-size: inherit !important;
-            color: #ED5E42 !important;
-        }
-
-        .logo__img {
-            height: 23px;
-        }
 
     }
 </style>

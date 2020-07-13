@@ -1,5 +1,5 @@
 <template>
-    <section class="tickets">
+    <section class="tickets" id="tickets">
         <div class="container">
             <div class="tickets__inner inner">
                 <h2 class="tickets__inner-title subtitle">Где купить билет</h2>
@@ -10,7 +10,11 @@
 
                         <div class="info_box__item">
                             <div class="info_box__item-left">
-                                <img class="info_box__item-img" src="../assets/img/Group1-1.png">
+                                <div class="info_box__item-img">
+                                    <div class="info_box__item-circle-second">
+                                        <img class="" src="../assets/img/web_icn.png">
+                                    </div>
+                                </div>
                             </div>
                             <div class="info_box__item-right">
                                 <p class="info_box__ir-title">На сайте </p>
@@ -20,7 +24,11 @@
 
                         <div class="info_box__item">
                             <div class="info_box__item-left">
-                                <img class="info_box__item-img" src="../assets/img/Group1-2.png">
+                                <div class="info_box__item-img">
+                                    <div class="info_box__item-circle-second">
+                                        <img class="" src="../assets/img/mobile_icn.png">
+                                    </div>
+                                </div>
                             </div>
                             <div class="info_box__item-right">
                                 <p class="info_box__ir-title">В мобильном приложении</p>
@@ -30,7 +38,11 @@
 
                         <div class="info_box__item">
                             <div class="info_box__item-left">
-                                <img class="info_box__item-img" src="../assets/img/Group1-3.png">
+                                <div class="info_box__item-img">
+                                    <div class="info_box__item-circle-second">
+                                        <img class="" src="../assets/img/store-solid.png">
+                                    </div>
+                                </div>
                             </div>
                             <div class="info_box__item-right">
                                 <p class="info_box__ir-title">В розничных точках продаж </p>
@@ -40,7 +52,11 @@
 
                         <div class="info_box__item">
                             <div class="info_box__item-left">
-                                <img class="info_box__item-img" src="../assets/img/Group1-4.png">
+                                <div class="info_box__item-img">
+                                    <div class="info_box__item-circle-second">
+                                        <img class="" src="../assets/img/envelope-open-text-solid.png">
+                                    </div>
+                                </div>
                             </div>
                             <div class="info_box__item-right">
                                 <p class="info_box__ir-title">Через SMS </p>
@@ -68,7 +84,9 @@
     }
 </script>
 
-<style scoped>
+<style scoped lang="scss">
+    @import "../assets/css/variables.scss";
+
     .tickets {
         padding-top: 35px;
     }
@@ -76,10 +94,10 @@
     .tickets__inner-bottom {
         margin-top: 22px;
     }
-    .tickets__inner-bottom-line-top {
+    .tickets__inner-bottom-line-top, .tickets__inner-bottom-line-bottom {
         height: 3px;
         width: 50px;
-        background-color: #ED5E42;
+        background-color: $main-bg-color;
     }
 
     .tickets__ib-text {
@@ -88,11 +106,6 @@
         margin-bottom: 22px;
     }
 
-    .tickets__inner-bottom-line-bottom {
-        height: 3px;
-        width: 50px;
-        background-color: #ED5E42;
-    }
 
     @media (max-width: 479px) {
         .tickets {

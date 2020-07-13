@@ -45,11 +45,12 @@
     }
 </script>
 
-<style scoped>
+<style scoped lang="scss">
+    @import "../assets/css/variables.scss";
     .how_is_work__inner-description {
         font-size: 20px;
         margin-top: 26px;
-        color:#040404;
+        color:$main-font-color;
         margin-bottom: 29px;
     }
 
@@ -68,13 +69,13 @@
     .how_is_work__inner-info-line {
         margin-right: 22px;
         width: 6px;
-        background-color: #ED5E42;
+        background-color: $main-bg-color;
     }
 
     .how_is_work__inner-info-p {
         margin: 0;
         font-weight: 700;
-        color: #000000;
+        color: $title-font-color;
     }
 
     .how_is_work__inner-last-p {
@@ -84,7 +85,7 @@
 
     @media (max-width: 479px) {
         .how_is_work__inner-description {
-            font-size: 18px;
+            font-size: $font-size;
         }
 
         .how_is_work__inner-info-p {

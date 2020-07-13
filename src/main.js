@@ -15,11 +15,13 @@ import Result from "@/components/Result";
 import TakeMoney from "@/components/TakeMoney";
 import Footer from "@/components/Footer";
 
+import './assets/css/style.scss';
+
 import { library } from '@fortawesome/fontawesome-svg-core'
-import { faFacebook, faTwitter, faVk } from '@fortawesome/free-brands-svg-icons'
+import { faFacebookF, faTwitter, faVk } from '@fortawesome/free-brands-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 
-library.add(faFacebook)
+library.add(faFacebookF)
 library.add(faTwitter)
 library.add(faVk)
 

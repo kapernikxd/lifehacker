@@ -1,9 +1,9 @@
 <template>
-    <section class="win">
+    <section class="win" id="win">
         <div class="container">
             <div class="win__inner inner">
-                <h2 class="win__inner-title subtitle">Что можно выиграть</h2>
-                <img class="win__inner-img img" src="../assets/img/1.jpg">
+                <h2 class="win__inner-title subtitle">{{subtitle}}</h2>
+                <img class="win__inner-img img" :src="image">
                 <p class="win__inner-text description">
                     В первых турах можно выиграть от нескольких тысяч до нескольких миллионов рублей, а также автомобили, загородные дома и путешествия. Все выигрыши можно получить в денежном эквиваленте.
                 </p><br/>
@@ -19,34 +19,18 @@
                     <h3 class="info_box__title h3">Самые крупные выигрыши в «Русском лото»</h3>
                     <div class="info_box__items">
 
-                        <div class="info_box__item">
-                            <div class="info_box__item-left">
-                                <img class="info_box__item-img " src="../assets/img/Group1.png">
-                            </div>
-                            <div class="info_box__item-right">
-                                <p class="info_box__ir-title">Наталья Власова — 506 000 000 рублей.</p>
-                                <p class="info_box__ir-description">1 204-й тираж, трансляция от 5 ноября 2017 года. Деньги пенсионерка решила потратить на покупку жилья, отдых, образование дочери
-                                    и благотворительность.</p><br>
-                            </div>
-                        </div>
 
-                        <div class="info_box__item">
+                        <div class="info_box__item" v-for="(info_box, i) in info_boxs" :key="i">
                             <div class="info_box__item-left">
-                                <img class="info_box__item-img " src="../assets/img/Group2.png">
+                                <div class="info_box__item-img">
+                                    <div class="info_box__item-circle-second">
+                                        <p class="info_box__item-num">{{info_box.icon}}</p>
+                                    </div>
+                                </div>
                             </div>
                             <div class="info_box__item-right">
-                                <p class="info_box__ir-title">Любовь и Сергей Догоровы — 500 000 000 рублей.</p>
-                                <p class="info_box__ir-description">1 264-й тираж, трансляция от 1 января 2019 года. Победители вложились в путешествия, покупку квартиры, помощь родственникам и благотворительность. Часть суммы собираются инвестировать.</p><br>
-                            </div>
-                        </div>
-
-                        <div class="info_box__item">
-                            <div class="info_box__item-left">
-                                <img class="info_box__item-img " src="../assets/img/Group3.png">
-                            </div>
-                            <div class="info_box__item-right">
-                                <p class="info_box__ir-title">Николай и Оксана Мирошниченко — 500 000 000 рублей.</p>
-                                <p class="info_box__ir-description">1 264-й тираж, трансляция от 1 января 2019 года. Полмиллиарда планируют потратить на путешествия, выплату ипотеки, помощь родственникам и благотворительность.</p><br>
+                                <p class="info_box__ir-title">{{info_box.title}}</p>
+                                <p class="info_box__ir-description">{{info_box.description}}</p><br>
                             </div>
                         </div>
 
@@ -64,8 +48,29 @@
 </template>
 
 <script>
+    import image from '../assets/img/1.jpg';
     export default {
         name: "Win",
+        data () {
+            return {
+                subtitle: "Что можно выиграть",
+                image: image,
+                info_boxs: [
+                    {   title: 'Наталья Власова — 506 000 000 рублей.',
+                        description: '1 204-й тираж, трансляция от 5 ноября 2017 года. Деньги пенсионерка решила потратить на покупку жилья, отдых, образование дочери и благотворительность.',
+                        icon: 1
+                    },
+                    {   title: 'Любовь и Сергей Догоровы — 500 000 000 рублей.',
+                        description: '1 264-й тираж, трансляция от 1 января 2019 года. Победители вложились в путешествия, покупку квартиры, помощь родственникам и благотворительность. Часть суммы собираются инвестировать.',
+                        icon: 2
+                    },
+                    {   title: 'Николай и Оксана Мирошниченко — 500 000 000 рублей.',
+                        description: '1 264-й тираж, трансляция от 1 января 2019 года. Полмиллиарда планируют потратить на путешествия, выплату ипотеки, помощь родственникам и благотворительность.',
+                        icon: 3
+                    },
+                ]
+            }
+        },
         methods: {
             handleScroll () {
                 let listItems = document.querySelectorAll(".info_box__item-img");
@@ -101,7 +106,7 @@
     }
 </script>
 
-<style scoped>
+<style scoped lang="scss">
 
     .win {
         padding-top: 59px;

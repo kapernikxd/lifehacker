@@ -1,5 +1,5 @@
 <template>
-    <section class="take_money">
+    <section class="take_money" id="take_money">
         <div class="container">
             <div class="take_money__inner inner">
                 <h2 class="result__inner-title subtitle">Как получить выигрыш</h2>
@@ -16,7 +16,11 @@
 
                         <div class="info_box__item">
                             <div class="info_box__item-left">
-                                <img class="info_box__item-img" src="../assets/img/Group1.png">
+                                <div class="info_box__item-img">
+                                    <div class="info_box__item-circle-second">
+                                        <img class="" src="../assets/img/purse_icn.png">
+                                    </div>
+                                </div>
                             </div>
                             <div class="info_box__item-right">
                                 <p class="info_box__ir-title">Перевести на баланс кошелька «Столото» — до 100 000 рублей</p>
@@ -26,7 +30,11 @@
 
                         <div class="info_box__item">
                             <div class="info_box__item-left">
-                                <img class="info_box__item-img" src="../assets/img/Group2.png">
+                                <div class="info_box__item-img">
+                                    <div class="info_box__item-circle-second">
+                                        <img class="" src="../assets/img/store-solid.png">
+                                    </div>
+                                </div>
                             </div>
                             <div class="info_box__item-right">
                                 <p class="info_box__ir-title">Забрать в точке продаж — до 2 000 рублей </p>
@@ -36,7 +44,11 @@
 
                         <div class="info_box__item">
                             <div class="info_box__item-left">
-                                <img class="info_box__item-img" src="../assets/img/Group3.png">
+                                <div class="info_box__item-img">
+                                    <div class="info_box__item-circle-second">
+                                        <img class="" src="../assets/img/round-description-24px.png">
+                                    </div>
+                                </div>
                             </div>
                             <div class="info_box__item-right">
                                 <p class="info_box__ir-title">Перевести на лицевой счёт — от 100 000 рублей </p>
@@ -46,7 +58,11 @@
 
                         <div class="info_box__item">
                             <div class="info_box__item-left">
-                                <img class="info_box__item-img" src="../assets/img/Group4.png">
+                                <div class="info_box__item-img">
+                                    <div class="info_box__item-circle-second">
+                                        <img class="" src="../assets/img/coins-solid.png">
+                                    </div>
+                                </div>
                             </div>
                             <div class="info_box__item-right">
                                 <p class="info_box__ir-title">В лотерейном центре «Столото» в Москве можно получить<br/>
@@ -75,7 +91,8 @@
     }
 </script>
 
-<style scoped>
+<style scoped lang="scss">
+    @import "../assets/css/variables.scss";
 
     .take_money {
         padding-top: 47px;
@@ -88,8 +105,8 @@
 
     .take_money__button {
         margin-top: 71px;
-        background-color: #ED5E42;
-        font-family: 'Roboto Condensed', sans-serif;
+        background-color: $main-bg-color;
+        font-family: $font-family-title;
         font-size: 24px;
         text-align: center;
         padding-top: 11px;

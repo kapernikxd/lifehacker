@@ -3,12 +3,9 @@
         <div class="container">
             <div class="navigation__inner">
                 <ul>
-                    <li><a href="">Что можно выиграть</a></li>
-                    <li><a href="">Где купить билет</a></li>
-                    <li><a href="">Как играть</a></li>
-                    <li><a href="">Туры лотереи</a></li>
-                    <li><a href="">Где узнать результаты</a></li>
-                    <li><a href="">Как получить выигрыш</a></li>
+                    <li v-for="navigation in navigations" :key="navigation.name">
+                        <a :href="navigation.url">{{ navigation.name }}</a>
+                    </li>
                 </ul>
             </div>
         </div>
@@ -18,11 +15,25 @@
 <script>
     export default {
         name: "Navigation",
+        data () {
+            return {
+                navigations: [
+                    { name: 'Что можно выиграть', url:  '#win'},
+                    { name: 'Где купить билет', url:  '#tickets' },
+                    { name: 'Как играть', url:  '#how_play' },
+                    { name: 'Туры лотереи', url:  '#lottery' },
+                    { name: 'Где узнать результаты', url:  '#result' },
+                    { name: 'Как получить выигрыш', url:  '#take_money' },
+                ]
+            }
+        },
+
         methods: {
             handleScroll () {
                 let navbar = document.querySelector(".navigation");
-                var main = document.querySelector(".main");
-                let header = main.offsetHeight + main.offsetTop;
+                let headerheight = document.querySelector(".header").offsetHeight;
+                let main = document.querySelector(".main");
+                let header = main.offsetHeight + main.offsetTop - headerheight;
 
                 if (window.pageYOffset >= header) {
                     navbar.classList.add("sticky-nav")
