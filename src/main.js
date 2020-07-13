@@ -1,7 +1,5 @@
 import Vue from 'vue'
 import App from './App.vue'
-import router from './router'
-import store from './store'
 
 import Header from "@/components/Header";
 import Main from "@/components/Main";
@@ -45,7 +43,5 @@ Vue.component('Footer', Footer)
 
 
 new Vue({
-  router,
-  store,
   render: h => h(App)
 }).$mount('#app')
